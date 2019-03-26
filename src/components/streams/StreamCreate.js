@@ -6,6 +6,7 @@ class StreamCreate extends Component {
     renderInput({ input, label }) {
         // {input} is from formProps.input
         // formProps comes from the Field component props.
+        console.log('input:',input);
         
         return (
             <div>
@@ -16,8 +17,8 @@ class StreamCreate extends Component {
     }
 
     onSubmit(formValues) {
+        validate(formValues);
         console.log(formValues);
-        
     }
 
     render() {
@@ -29,6 +30,18 @@ class StreamCreate extends Component {
             </form>
         );
     }
+}
+
+const validate = (formValues) => {
+    const errors = {};
+
+    for (const key of formValues) {
+        if(!formValues[key]) {
+            errors[key] = `You must enter a ${key}`;
+        }
+    }
+
+    return errors;
 }
 
 export default reduxForm({
