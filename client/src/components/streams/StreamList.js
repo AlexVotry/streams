@@ -39,11 +39,11 @@ class StreamList extends Component {
     renderCreate() {
         if (this.props.isSignedIn) {
             return (
-                <div style={{ textAlign: 'right'}}>
-                    <Link to="/streams/new">
+                <Link to="/streams/new">
+                    <button className="ui button primary" style={{ textAlign: 'right'}}>
                         Create Stream
-                    </Link>
-                </div>
+                    </button>
+                </Link>
             )
         }
     }
@@ -52,10 +52,10 @@ class StreamList extends Component {
         return (
             <div>
                 <h2>Streams:</h2>
-                {this.renderCreate()}
                 <div className="ui celled list">
                     {this.renderList()}
                 </div>
+                {this.renderCreate()}
             </div>
         );
     }
