@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
+import streamReducer from './streamReducer';
 import { reducer as formReducer } from 'redux-form';
 
 
 // for formReducer to work, it must be assigned to the property "form". 
 export default combineReducers({
     auth: authReducer,
-    form: formReducer
+    form: formReducer,
+    streams: streamReducer
 })

@@ -1,0 +1,7 @@
+{
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "workbench.statusBar.feedback.visible": false,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false
+}
