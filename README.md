@@ -1,3 +1,5 @@
+This uses GoogleAuth for client side authentication.
+
 I wanted to explore how redux-form works. It has built-in action creators and reducers, so understanding how redux works is essential.  We just add the formReducer from redux-form into our list of reducers. 
 
 Essentially, the redux-form will manage all our input data from forms in the redux store.
